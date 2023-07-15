@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content%}
+<br><br><br><br><br>
+<div class="col-md-4">
+{% if status %}
+<div class="container " >
+    <h2>Payment status regarding your order</h2>
+    <i class="fa fa-check-circle"  aria-hidden="true" style="font-size: 80px; color: green;"><p style="color: aliceblue;">Payment success</p></i></div>
+    <h2 style="font-size: 60px;">Thank you, your Payment was successful</h2>
+</div>  
+{% else %}
+    <div class="container mt-3" style="text-align: center;">
+    <h2>Payment status regarding your order</h2>
+    <i class="fa fa-times-circle"  aria-hidden="true" style="font-size: 80px; color: red;"><p style="color: aliceblue;">Payment Failed</p></i></div>
+    <p style="color: white;">retry or <a href="contact.html">for any queries</a>  </p>            
+{% endif %}
+<div class="text-align-items-center">
+    <button type="button" class="btn "><a href="/" style="color: aliceblue;">>> Continue Shopping...!</a></button>   
+</div>
+{% endblock %}
